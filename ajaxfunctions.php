@@ -335,9 +335,9 @@ if(isset($_GET['signup']))
 		$mail->SMTPSecure = "tls";
         $mail->Host= "smtp.ipage.com";
 		$mail->SMTPAuth = true;
-		$mail->Username = 'aruna@albertatechworks.com'; // SMTP username
-		$mail->Password = 'Aruna123456'; // SMTP password
-		$mail->From = 'aruna@albertatechworks.com'; 
+		$mail->Username = 'support@albertatechworks.com'; // SMTP username
+		$mail->Password = 'Support1'; // SMTP password
+		$mail->From = 'support@albertatechworks.com'; 
 		$mail->FromName = 'Underdog';
 		$mail->AddAddress($email,$first_name);
 		$mail->WordWrap = 50;
@@ -438,9 +438,9 @@ if(isset($_GET['usersignup']))
 		$mail->SMTPSecure = "tls";
         $mail->Host= "smtp.ipage.com";
 		$mail->SMTPAuth = true;
-		$mail->Username = 'aruna@albertatechworks.com'; // SMTP username
-		$mail->Password = 'Aruna123456'; // SMTP password
-		$mail->From = 'aruna@albertatechworks.com'; 
+		$mail->Username = 'support@albertatechworks.com'; // SMTP username
+		$mail->Password = 'Support1'; // SMTP password
+		$mail->From = 'support@albertatechworks.com'; 
 		$mail->FromName = 'Underdog';
 		$mail->AddAddress($email,$first_name);
 		$mail->WordWrap = 50;
@@ -549,9 +549,9 @@ if(isset($_GET['forgot']))
 		$mail->SMTPSecure = "tls";
         $mail->Host= "smtp.ipage.com";
 		$mail->SMTPAuth = true;
-		$mail->Username = 'aruna@albertatechworks.com'; // SMTP username
-		$mail->Password = 'Aruna123456'; // SMTP password
-		$mail->From = 'aruna@albertatechworks.com'; 
+		$mail->Username = 'support@albertatechworks.com'; // SMTP username
+		$mail->Password = 'Support1'; // SMTP password
+		$mail->From = 'support@albertatechworks.com'; 
 		$mail->FromName = 'Underdog';
 		$mail->AddAddress($email,$username);
 		$mail->WordWrap = 50;
@@ -718,9 +718,9 @@ if(isset($_GET['resendmail']))
 		$mail->SMTPSecure = "tls";
         $mail->Host= "smtp.ipage.com";
 		$mail->SMTPAuth = true;
-		$mail->Username = 'aruna@albertatechworks.com'; // SMTP username
-		$mail->Password = 'Aruna123456'; // SMTP password
-		$mail->From = 'aruna@albertatechworks.com'; 
+		$mail->Username = 'support@albertatechworks.com'; // SMTP username
+		$mail->Password = 'Support1'; // SMTP password
+		$mail->From = 'support@albertatechworks.com'; 
 		$mail->FromName = 'Underdog';
 		//$mail->AddAddress($email,$username);
 		foreach ($addr as $ad) {
@@ -797,9 +797,9 @@ if(isset($_GET['create_league']))
 		$mail->SMTPSecure = "tls";
         $mail->Host= "smtp.ipage.com";
 		$mail->SMTPAuth = true;
-		$mail->Username = 'aruna@albertatechworks.com'; // SMTP username
-		$mail->Password = 'Aruna123456'; // SMTP password
-		$mail->From = 'aruna@albertatechworks.com'; 
+		$mail->Username = 'support@albertatechworks.com'; // SMTP username
+		$mail->Password = 'Support1'; // SMTP password
+		$mail->From = 'support@albertatechworks.com'; 
 		$mail->FromName = 'Underdog';
 		$mail->AddAddress($email,$first_name);
 		$mail->WordWrap = 50;
