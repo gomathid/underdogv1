@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>alertify.js - example page</title>
+	<link rel="stylesheet" href="themes_j/alertify.core.css" />
+	<link rel="stylesheet" href="themes_j/alertify.default.css" id="toggleCSS" />
+	
+	
+</head>
+<body>
+
+	
+	<a href="#" id="order">Button Order</a>
+
+	<script src="lib_j/jquery-1.9.1.js"></script>
+	<script src="lib_j/alertify.min.js"></script>
+	<script>
+		function reset () {
+			//$("#toggleCSS").attr("href", "themes_j/alertify.default.css");
+			alertify.set({
+				labels : {
+					ok     : "OK",
+					cancel : "Cancel"
+				},
+				delay : 5000,
+				buttonReverse : false,
+				buttonFocus   : "ok"
+			});
+		}
+
+		// ==============================
+	
+		$("#order").on( 'click', function () {
+			reset();
+			alertify.set({ buttonReverse: true });
+			alertify.confirm("Are you sure you want to remove this pick?", function (e) {
+				if (e) {
+					alertify.success("You've clicked OK");
+				} else {
+					alertify.error("You've clicked Cancel");
+				}
+			});
+			return false;
+		});
+
+	</script>
+
+</body>
+</html>

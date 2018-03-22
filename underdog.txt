@@ -1,0 +1,42 @@
+albertatechworks.com/projects/underdogv1
+Normal user login credentials :
+
+arunatest
+123456
+
+Menu links for this login are  :  League,My Contest/History, My Account,League Leader Board
+
+League leader login  credentials :
+
+aruna123
+123456
+
+Menu links for this login are  :  League,My Contest/History,manage users, My Account,League Leader Board 
+
+Admin login credentials:
+arunavkda
+123456
+
+Menu links for this login are  :  League,Picks, User,My Account,Score Board 
+
+
+Functional specifications:
+We need to pull and display matches from the api . we need to display sunday,monday thursday and nxt sunday matches
+
+for the first sunday the betting stops at 9AM ET, Monday at 5PM ET,Thursday at 5PM ET, and next sunday at 9AM ET (should follow eastern time)
+
+=================
+ftp details:
+
+host : albertatechworks.com
+username : albertadev
+password: standardbrown@ATW123
+
+To access mysql database u need to login to ipage cpanel
+https://www1.ipage.com/secure/login.bml?st=1519359697
+iPage login details
+
+username : albertatechworks.com
+password: standardbrown@ATW123
+
+
