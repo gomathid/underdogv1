@@ -1,8 +1,10 @@
 <?php
 include('db.php');
 
-$output = shell_exec('curl -X GET https://jsonodds.com/api/results/nfl -H "JsonOdds-API-Key: f97bb413-6a06-40ee-b307-a592b2cbbac9"');
-$resultsArray=json_decode($output);
+//$output = shell_exec('curl -X GET https://jsonodds.com/api/results/nfl -H "JsonOdds-API-Key: f97bb413-6a06-40ee-b307-a592b2cbbac9"');
+include('jsonstring.php');
+$resultsArray = json_decode($json_string);
+//$resultsArray=json_decode($output);
 $date=date("Y-m-d H:i:s");
 foreach ($resultsArray as $results) {
 	
