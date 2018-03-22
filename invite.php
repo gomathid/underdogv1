@@ -175,7 +175,7 @@ function FBInvite(){
                     
                     </p>
                     
-					<p><button type="button" class="btn facebook" id="facebook_but" onclick="FBInvite()" ><span class="fa fa-facebook-official"></span> Facebook</button><button type="button" class="btn gmail" id="email_but" ><span class="fa fa-envelope" ></span> Email</button></p>
+					<p><button type="button" class="btn facebook" id="facebook_but" onClick="FBInvite()" ><span class="fa fa-facebook-official"></span> Facebook</button><button type="button" class="btn gmail" id="email_but" ><span class="fa fa-envelope" ></span> Email</button></p>
 					
                    
                    <span id="emailDiv"> 

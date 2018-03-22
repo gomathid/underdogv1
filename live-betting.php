@@ -302,9 +302,14 @@ function totalSort($a, $b) {
 										
 							
 								 $date2 = date("Y-m-d H:i:s"); 
+								//echo $splitVal[1];
+								//echo '<br>';
+						$time1=strtotime($splitVal[1]." GMT+3");
+						//echo $time1;
+							//	echo '<br>';
 								
-								$time1=strtotime($splitVal[1]." GMT+3");
 								$time2=strtotime(date("H:i:s")." GMT+3");
+								//echo $time2; exit;
 								
 								$diff = abs((strtotime($date2)." GMT+3") - (strtotime($date1)." GMT+3")); 
 								
@@ -462,7 +467,7 @@ function totalSort($a, $b) {
 										$class='disabled';
 									}
 								  }
-								 
+								 echo $class;
 							 if($resultsLive['OddType']=='Game'){
 								 
 								 $pointsHome=$resultsLive['PointSpreadHome'];
@@ -484,13 +489,16 @@ function totalSort($a, $b) {
               <input type="hidden" name="money_line_betting" id="money_line_betting" value="<?php  echo $resultsLive['MoneyLineHome']; ?>">
               <input type="hidden" name="money_line_opponent" id="money_line_opponent" value="<?php  echo $resultsLive['MoneyLineAway']; ?>">
             </form>
-             <?php if($matchDateCheck<=$staticEnddate){ ?>
-            <tr class="bet" data-id="<?php echo $id; ?>" id="home" style="cursor:pointer">
+             <?php if($matchDateCheck<=$staticEnddate){
+			 
+			   if($matchDate==$currentDate){ if($time2>$time1){ ?><tr bgcolor="#CCCCCC"><?php } else {?>
+            <tr class="bet" data-id="<?php echo $id; ?>" id="home" style="cursor:pointer"><?php } } else {?>   <tr class="bet" data-id="<?php echo $id; ?>" id="home" style="cursor:pointer"><?php }?>
               <td ><?php if($pointsHome>$pointsAway){echo $mydataLive['HomeTeam']; }else{ $mydataLive['AwayTeam']; } ?></td>
               <td align="center" style="color:red">VS</td>
               <td  class="link-show"><?php if($pointsHome>$pointsAway){echo $mydataLive['AwayTeam']; }else{ $mydataLive['HomeTeam']; } ?>
                 <p align="left">
-                  <?php  if($matchDate==$currentDate){ if($time2>$time1){echo "Running";} else {echo $time." Starts in".$hours."h  ".$minuts."m";} }else{ ?>
+                  <?php  if($matchDate==$currentDate){ if($time2>$time1){
+				    echo "Running";?> <?php } else {echo $time." Starts in".$hours."h  ".$minuts."m";} }else{ ?>
                   <?php echo $dateLive." ".$timeLive; ?>
                   <?php } ?>
                 </p></td>
@@ -745,8 +753,6 @@ function totalSort($a, $b) {
 		var team=$(this).attr('id');
 		var idVal=$(this).attr('data-id');
 		var league_session_id=$('#league_session_id').val();
-		
-		
 		$('#betting_team').val(team);
 		var formdata= $("body").find("#"+idVal + "_form"). serialize();
 		//var formdata= $(this).closest('form').find(".betting_class"). serialize();
