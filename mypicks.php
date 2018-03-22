@@ -111,6 +111,7 @@ $datearrayStr = "'" .implode ("', '", $dateRange_week) . "'";
 				$resultsData=array('betId'=>$betId,'betTeam'=>$betTeam,"winstatus"=>$winStatus,"matchStatus"=>$matchStatus,"score"=>$score,'away_team'=>$away_team,'home_team'=>$home_team,'HomeScore'=>$HomeScore,'AwayScore'=>$AwayScore,'leaguename'=>$league_name,'added_date'=>$added_date,'goal_spread_betting'=>$goal_spread_betting,'goal_spread_opponent'=>$goal_spread_opponent);
 						
 				array_push($matcharray,$resultsData);
+					array_push($scoreresults,$matcharray);
 				}
 				
 		    }

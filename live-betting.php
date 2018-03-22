@@ -467,7 +467,7 @@ function totalSort($a, $b) {
 										$class='disabled';
 									}
 								  }
-								 echo $class;
+								 //echo $class;
 							 if($resultsLive['OddType']=='Game'){
 								 
 								 $pointsHome=$resultsLive['PointSpreadHome'];
@@ -489,16 +489,16 @@ function totalSort($a, $b) {
               <input type="hidden" name="money_line_betting" id="money_line_betting" value="<?php  echo $resultsLive['MoneyLineHome']; ?>">
               <input type="hidden" name="money_line_opponent" id="money_line_opponent" value="<?php  echo $resultsLive['MoneyLineAway']; ?>">
             </form>
-             <?php if($matchDateCheck<=$staticEnddate){
-			 
-			   if($matchDate==$currentDate){ if($time2>$time1){ ?><tr bgcolor="#CCCCCC"><?php } else {?>
-            <tr class="bet" data-id="<?php echo $id; ?>" id="home" style="cursor:pointer"><?php } } else {?>   <tr class="bet" data-id="<?php echo $id; ?>" id="home" style="cursor:pointer"><?php }?>
+              <?php if($matchDateCheck<=$staticEnddate){ ?>
+               <?php  if($matchDate==$currentDate){ if($time2>$time1){?><tr><?php } else {?>
+            <tr class="bet" data-id="<?php echo $id; ?>" id="home" style="cursor:pointer"> <?php } } else { ?>
+            <tr class="bet" data-id="<?php echo $id; ?>" id="home" style="cursor:pointer">
+            <?php }?>
               <td ><?php if($pointsHome>$pointsAway){echo $mydataLive['HomeTeam']; }else{ $mydataLive['AwayTeam']; } ?></td>
               <td align="center" style="color:red">VS</td>
               <td  class="link-show"><?php if($pointsHome>$pointsAway){echo $mydataLive['AwayTeam']; }else{ $mydataLive['HomeTeam']; } ?>
                 <p align="left">
-                  <?php  if($matchDate==$currentDate){ if($time2>$time1){
-				    echo "Running";?> <?php } else {echo $time." Starts in".$hours."h  ".$minuts."m";} }else{ ?>
+                  <?php  if($matchDate==$currentDate){ if($time2>$time1){echo "Running";} else {echo $time." Starts in".$hours."h  ".$minuts."m";} }else{ ?>
                   <?php echo $dateLive." ".$timeLive; ?>
                   <?php } ?>
                 </p></td>
